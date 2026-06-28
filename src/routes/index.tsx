@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import heroAsset from "@/assets/hero-wedding.png";
@@ -37,20 +36,6 @@ import event33 from "@/assets/event-33.jpg";
 import event34 from "@/assets/event-34.jpg";
 import event35 from "@/assets/event-35.jpg";
 import event36 from "@/assets/event-36.jpg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Jose García Photography · Fotógrafo en Córdoba" },
-      { name: "description", content: "Retratos, motor, eventos y paisajes en Córdoba, España. Fotografía profesional, editorial y cinematográfica." },
-      { property: "og:title", content: "Jose García Photography" },
-      { property: "og:description", content: "Retratos, motor, eventos y paisajes con una mirada auténtica." },
-      { property: "og:image", content: heroAsset },
-      { property: "twitter:image", content: heroAsset },
-    ],
-  }),
-  component: Index,
-});
 
 type Cat = "Eventos" | "Retratos" | "Motor" | "Paisajes";
 
@@ -277,7 +262,7 @@ function About() {
               ))}
             </ul>
             <blockquote className="mt-10 border-l-2 border-primary pl-5 italic text-muted-foreground">
-              “La fotografía no es solo capturar imágenes — es preservar emociones, historias y momentos irrepetibles.”
+              "La fotografía no es solo capturar imágenes — es preservar emociones, historias y momentos irrepetibles."
             </blockquote>
           </div>
         </Reveal>
@@ -543,7 +528,7 @@ function Footer() {
   );
 }
 
-function Index() {
+export default function Index() {
   return (
     <main className="bg-background text-foreground font-sans">
       <Nav />
